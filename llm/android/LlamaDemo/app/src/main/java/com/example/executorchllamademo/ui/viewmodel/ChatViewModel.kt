@@ -96,13 +96,6 @@ class ChatViewModel(application: Application) : AndroidViewModel(application), L
     private val executor: Executor = Executors.newSingleThreadExecutor()
     private val contentResolver = application.contentResolver
 
-    override fun onCleared() {
-        super.onCleared()
-        module?.close()
-        loadedModules.forEach { (_, m) -> m.close() }
-        loadedModules.clear()
-    }
-
     init {
         // Check for clear chat history flag BEFORE loading saved messages
         val moduleSettings = demoSharedPreferences.getModuleSettings()
