@@ -153,7 +153,7 @@ data class ModuleSettings(
     }
 
     companion object {
-        const val DEFAULT_TEMPERATURE = 0.0
+        const val DEFAULT_TEMPERATURE = 0.6
         val DEFAULT_MODEL = ModelType.LLAMA_3
         val DEFAULT_BACKEND = BackendType.XNNPACK
     }
